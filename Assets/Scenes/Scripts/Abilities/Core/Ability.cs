@@ -2,14 +2,15 @@ using UnityEngine;
 
 public enum AbilityCostType { Health, Mana }
 
-/// <summary> Base ability with cooldown and cost. </summary>
 public abstract class Ability : MonoBehaviour
 {
+    [Header("Base Settings")]
     [SerializeField] protected string _name;
     [SerializeField] protected Sprite _icon;
     [SerializeField] protected float _cooldown = 2f;
     [SerializeField] protected AbilityCostType _costType;
     [SerializeField] protected float _costAmount = 10f;
+
 
     private float _lastUsedTime = -Mathf.Infinity;
 
